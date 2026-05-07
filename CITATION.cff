@@ -1,0 +1,32 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite the accompanying paper."
+title: "Layer Collapse in Diffusion Language Models"
+authors:
+  - family-names: "Conzelmann"
+    given-names: "Alexander"
+    affiliation: "Tübingen AI Center; Max Planck Institute for Intelligent Systems"
+    email: "a.conzelmann@uni-tuebingen.de"
+  - family-names: "Catalan-Tatjer"
+    given-names: "Albert"
+    affiliation: "Tübingen AI Center; Max Planck Institute for Intelligent Systems; ELLIS Institute Tübingen"
+  - family-names: "Liu"
+    given-names: "Shiwei"
+    affiliation: "Tübingen AI Center; Max Planck Institute for Intelligent Systems; ELLIS Institute Tübingen"
+repository-code: "https://github.com/Conzel/super-outlier-dlm"
+license: Apache-2.0
+preferred-citation:
+  type: article
+  title: "Layer Collapse in Diffusion Language Models"
+  authors:
+    - family-names: "Conzelmann"
+      given-names: "Alexander"
+    - family-names: "Catalan-Tatjer"
+      given-names: "Albert"
+    - family-names: "Liu"
+      given-names: "Shiwei"
+  year: 2026
+  # TODO: arXiv link / ID
+  # url: "https://arxiv.org/abs/XXXX.XXXXX"
+  # identifiers:
+  #   - type: other
+  #     value: "arXiv:XXXX.XXXXX"

@@ -1,0 +1,13 @@
+# @package _global_.pruning
+# Wanda pruning with ABC-gain sparsity strategy.
+# Per-layer sparsity is inversely proportional to cumulative forward error-amplification
+# gain (arXiv:2509.23500), computed under magnitude-pruning perturbation at target sparsity.
+# alpha_epsilon = Lambda: additive range ±Lambda around target sparsity.
+strategy: wanda
+sparsity_strategy: "abc-gain"
+sparsity: 0.5
+prunen: 0
+prunem: 0
+alpha_epsilon: 0.08
+nsamples: 128
+seed: 42

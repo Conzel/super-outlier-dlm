@@ -1,0 +1,27 @@
+# HTCondor resource defaults for job submission via scripts/submit.py
+# Override per-cluster by creating configs/local/condor.yaml (gitignored).
+# See configs/local/condor.yaml.example for a template.
+
+universe: vanilla
+python: ${oc.env:REPO_DIR}/.venv/bin/python
+request_gpus: 1
+request_cpus: 2
+request_memory_gb: 128
+request_disk_gb: 40
+timeout_min: 1440  # 24 hours
+#bid: 25  # A100 minimum
+#requirements: 'regexp("A100|H100", TARGET.GPUs_DeviceName) && (TARGET.GPUs_GlobalMemoryMb > 70000)'
+bid: 35  # H100 minimum
+requirements: 'regexp("H100", TARGET.GPUs_DeviceName)'
+
+# Environment variables set on compute nodes (no internet access).
+# REPO_DIR, MODELS, HF_HOME must be set in the user's shell before submission.
+env:
+  REPO_DIR: ${oc.env:REPO_DIR}
+  MODELS: ${oc.env:MODELS}
+  TRANSFORMERS_OFFLINE: "1"
+  HF_DATASETS_OFFLINE: "1"
+  C4_LOCAL_PATH: ${oc.env:C4_LOCAL_PATH,${oc.env:HF_HOME}/datasets/c4_calibration.jsonl}
+  HF_DATASETS_CACHE: ${oc.env:HF_HOME}/datasets/hf_cache
+  TRITON_CACHE_DIR: ${oc.env:TMP_CACHE_DIR,/tmp}/triton_cache
+  TORCHINDUCTOR_CACHE_DIR: ${oc.env:TMP_CACHE_DIR,/tmp}/inductor_cache

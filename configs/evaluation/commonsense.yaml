@@ -1,0 +1,32 @@
+# @package _global_.evaluation
+task:
+  - arc_challenge
+  - hellaswag
+  - piqa
+  - winogrande
+  - boolq
+  - openbookqa
+  #- arc_easy
+  # - gsm8k
+  # - mmlu
+  # #- mmlu_pro
+batch_size: 8
+num_fewshot: null
+limit: null
+
+# Generation parameters (not used for loglikelihood tasks, but required by EvaluationConfig)
+gen_length: 1024
+steps: 1024
+block_length: 32
+
+# Caching options
+use_cache: true
+dual_cache: false
+
+# Parallel generation (set threshold to 0.9 to enable)
+threshold: 0
+
+# Advanced
+remasking: low_confidence
+show_speed: False
+request_batch_size: 1

@@ -1,0 +1,6 @@
+defaults:
+  - rank_colorlog
+
+filters:
+  rank_filter:
+    (): diffusion_prune.logging.rank_filter.OnlyFirstGPU

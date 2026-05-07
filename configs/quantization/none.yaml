@@ -1,0 +1,3 @@
+# @package _global_.quantization
+# No quantization - default behavior
+# Empty config results in quantization_config=None

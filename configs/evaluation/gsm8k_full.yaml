@@ -1,0 +1,22 @@
+# @package _global_.evaluation
+task: gsm8k
+batch_size: 1
+num_fewshot: 8
+limit: null
+
+# Generation parameters
+gen_length: 1024
+steps: 1024  # Should match gen_length for baseline
+block_length: 32
+
+# Caching options
+use_cache: true
+dual_cache: false
+
+# Parallel generation (set threshold to 0.9 to enable)
+threshold: null
+
+# Advanced
+remasking: low_confidence
+show_speed: true
+request_batch_size: 1

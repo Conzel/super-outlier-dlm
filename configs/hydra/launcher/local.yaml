@@ -1,0 +1,8 @@
+# @package _global_.hydra.launcher
+# Local launcher: runs multirun jobs sequentially in subprocesses on the current node.
+# Use this when you already have a GPU allocation and don't want cluster submission.
+#
+# Usage: python scripts/run.py --multirun +launcher=local model=dream_7b,llada_8b ...
+_target_: hydra_plugins.hydra_submitit_launcher.submitit_launcher.LocalLauncher
+submitit_folder: ${hydra.sweep.dir}/.submitit/%j
+timeout_min: 1440

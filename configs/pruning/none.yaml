@@ -1,0 +1,3 @@
+# @package _global_.pruning
+# No pruning - evaluate unpruned model as baseline
+# Empty config results in pruning_config=None

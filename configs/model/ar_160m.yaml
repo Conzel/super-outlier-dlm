@@ -1,0 +1,9 @@
+# @package _global_.model
+model_type: ar-160m
+hf_model_name: EleutherAI/pythia-160m
+checkpoint_path: albert/ar/ar_lr3e-4_step190000.pth
+model_base_path: ${oc.env:MODELS,null}
+device_map: auto
+torch_dtype: bfloat16
+trust_remote_code: false
+cache_dir: null

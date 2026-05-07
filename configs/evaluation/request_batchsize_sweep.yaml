@@ -1,0 +1,22 @@
+# @package _global_.evaluation
+# request_batch_size sweep config: arc_challenge with limited samples.
+# Used to find the highest request_batch_size (distinct loglikelihood requests
+# packed into one DLM forward pass) that runs without OOM.
+# Accuracy should be statistically identical across all successful values.
+task:
+  - arc_challenge
+batch_size: 128         # MC sample dim per forward pass (max from A24 batchsize sweep)
+request_batch_size: 1   # overridden by the sweep
+num_fewshot: 0
+limit: 200
+
+# Match production settings exactly so OOM behaviour is representative
+gen_length: 1024
+steps: 1024
+block_length: 32
+
+use_cache: true
+dual_cache: false
+threshold: 0
+remasking: low_confidence
+show_speed: false

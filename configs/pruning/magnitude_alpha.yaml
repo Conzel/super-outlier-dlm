@@ -1,0 +1,10 @@
+# @package _global_.pruning
+# Magnitude pruning with AlphaPruning sparsity strategy
+strategy: magnitude
+sparsity_strategy: "alpha-pruning"
+sparsity: 0.5
+prunen: 0
+prunem: 0
+alpha_epsilon: 0.15
+nsamples: 128
+seed: 42

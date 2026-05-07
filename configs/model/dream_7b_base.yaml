@@ -1,0 +1,8 @@
+# @package _global_.model
+model_type: dream-7b-base
+hf_model_name: Dream-org/Dream-v0-Base-7B
+model_base_path: ${oc.env:MODELS,null}
+device_map: auto
+torch_dtype: bfloat16
+trust_remote_code: true
+cache_dir: null

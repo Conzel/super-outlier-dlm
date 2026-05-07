@@ -1,0 +1,8 @@
+# @package _global_.model
+model_type: llada-8b
+hf_model_name: GSAI-ML/LLaDA-8B-Instruct
+model_base_path: ${oc.env:MODELS,null}
+device_map: auto
+torch_dtype: bfloat16
+trust_remote_code: true
+cache_dir: null

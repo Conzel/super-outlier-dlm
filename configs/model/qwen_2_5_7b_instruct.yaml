@@ -1,0 +1,8 @@
+# @package _global_.model
+model_type: qwen-2.5-7b-instruct
+hf_model_name: Qwen/Qwen2.5-7B-Instruct
+model_base_path: ${oc.env:MODELS,null}
+device_map: auto
+torch_dtype: bfloat16
+trust_remote_code: true
+cache_dir: null

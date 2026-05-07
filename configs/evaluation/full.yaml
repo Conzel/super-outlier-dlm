@@ -1,0 +1,18 @@
+# @package _global_.evaluation
+task: gsm8k
+batch_size: 1
+num_fewshot: 5
+limit: null
+
+# Generation parameters
+gen_length: 256
+steps: 256
+block_length: 32
+
+# Caching options
+use_cache: true
+dual_cache: false
+threshold: null
+
+show_speed: true
+request_batch_size: 1

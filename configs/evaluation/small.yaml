@@ -1,0 +1,24 @@
+# @package _global_.evaluation
+# Quick sanity-check config: arc_challenge with 10 samples
+task:
+  - arc_challenge
+batch_size: 4
+num_fewshot: 0
+limit: 10
+
+# Generation parameters
+gen_length: 256
+steps: 256
+block_length: 32
+
+# Caching options
+use_cache: true
+dual_cache: false
+
+# Parallel generation (set threshold to 0.9 to enable)
+threshold: null
+
+# Advanced
+remasking: low_confidence
+show_speed: true
+request_batch_size: 1

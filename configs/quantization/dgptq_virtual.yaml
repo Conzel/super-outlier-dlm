@@ -1,0 +1,8 @@
+# @package _global_.quantization
+strategy: dgptq-virtual
+bits: 4
+group_size: 128
+damp_percent: 0.01
+nsamples: 256
+seed: 42
+mask_repeats: 8

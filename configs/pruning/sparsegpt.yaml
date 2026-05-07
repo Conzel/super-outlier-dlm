@@ -1,0 +1,9 @@
+# @package _global_.pruning
+strategy: sparsegpt
+sparsity_strategy: "uniform"
+sparsity: 0.5
+prunen: 0
+prunem: 0
+alpha_epsilon: 0
+nsamples: 128
+seed: 42

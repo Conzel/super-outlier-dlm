@@ -1,0 +1,23 @@
+defaults:
+  - optional local: default
+  - model: llada_8b
+  - pruning: wanda
+  - quantization: none
+  - evaluation: gsm8k
+  - _self_
+  - override hydra/job_logging: rank_colorlog
+  - override hydra/hydra_logging: colorlog
+
+# Paths - configure via environment variables or local/default.yaml
+# REPO_DIR: Root directory of this repository
+# WORK_DIR: Working directory for outputs (can be on fast storage)
+repo_dir: ${oc.env:REPO_DIR,${hydra:runtime.cwd}}
+work_dir: ${oc.env:WORK_DIR,${repo_dir}}
+output_dir: ${work_dir}/out
+use_cache: true
+
+hydra:
+  run:
+    dir: .hydra_runs/${now:%Y-%m-%d}/${now:%H-%M-%S}
+  sweep:
+    dir: .hydra_runs/multirun/${now:%Y-%m-%d}/${now:%H-%M-%S}

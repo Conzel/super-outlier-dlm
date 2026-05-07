@@ -1,0 +1,8 @@
+# @package _global_.model
+model_type: llama-3.1-8b-instruct
+hf_model_name: meta-llama/Llama-3.1-8B-Instruct
+model_base_path: ${oc.env:MODELS,null}
+device_map: auto
+torch_dtype: bfloat16
+trust_remote_code: false
+cache_dir: null

@@ -1,0 +1,13 @@
+# @package _global_.pruning
+# Magnitude pruning with OWL (Outlier Weighed Layerwise) sparsity strategy
+# alpha_epsilon = Lambda from the original OWL paper (Table 17): additive range ±Lambda
+# threshold_M = outlier threshold multiplier M
+strategy: magnitude
+sparsity_strategy: "owl"
+sparsity: 0.5
+prunen: 0
+prunem: 0
+alpha_epsilon: 0.08
+owl_threshold_M: 5.0
+nsamples: 128
+seed: 42

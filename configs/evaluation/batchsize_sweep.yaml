@@ -1,0 +1,21 @@
+# @package _global_.evaluation
+# Batch size sweep config: arc_challenge with limited samples.
+# Used to find the highest batch size that runs without OOM.
+# Accuracy should be identical across batch sizes for the same limit/seed.
+task:
+  - arc_challenge
+batch_size: 8
+num_fewshot: 0
+limit: 200
+
+# Match production settings exactly so OOM behaviour is representative
+gen_length: 1024
+steps: 1024
+block_length: 32
+
+use_cache: true
+dual_cache: false
+threshold: 0
+remasking: low_confidence
+show_speed: false
+request_batch_size: 1

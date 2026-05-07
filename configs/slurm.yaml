@@ -1,0 +1,18 @@
+# SLURM resource defaults for job submission via scripts/submit.py
+# Override per-cluster by creating configs/local/slurm.yaml (gitignored).
+# See configs/local/slurm.yaml.example for a template.
+
+python: ${oc.env:REPO_DIR}/.venv/bin/python
+request_gpus: 1
+request_cpus: 4
+request_memory_gb: 100
+timeout_min: 1440  # 24 hours
+# gres: gpu:h100:1          # full gres string; overrides request_gpus if set
+# partition: gpu
+# constraint: h100           # node feature constraint for GPU type
+
+env:
+  REPO_DIR: ${oc.env:REPO_DIR}
+  MODELS: ${oc.env:MODELS}
+  TRANSFORMERS_OFFLINE: "1"
+  HF_DATASETS_OFFLINE: "1"

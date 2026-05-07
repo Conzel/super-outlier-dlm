@@ -1,0 +1,7 @@
+# @package _global_.quantization
+strategy: gptq-virtual
+bits: 4
+group_size: 128
+damp_percent: 0.01
+nsamples: 256
+seed: 42
