@@ -1,12 +1,11 @@
-# Diffusion-Prune
+# Super-Outlier in DLMs
 
 Systematic evaluation of pruning and quantization for diffusion language models
 (LLaDA-8B, DREAM-7B) compared against autoregressive baselines (Llama 3.1 8B,
 Qwen 2.5 7B).
 
 This repository accompanies the paper **"Layer Collapse in Diffusion Language
-Models"** by Alexander Conzelmann, Albert Catalan-Tatjer, and Shiwei Liu
-(Tübingen AI Center / MPI for Intelligent Systems / ELLIS Institute Tübingen).
+Models"** by Alexander Conzelmann, Albert Catalan-Tatjer, and Shiwei Liu.
 arXiv: TODO (link pending). See [`CITATION.cff`](CITATION.cff) for citation
 metadata.
 
@@ -44,15 +43,13 @@ python scripts/submit.py model=llada_8b pruning=wanda evaluation=commonsense \
 
 A SLURM launcher is also available; both are configured via
 `configs/condor.yaml` / `configs/slurm.yaml` and overridable per-cluster via
-`configs/local/{condor,slurm}.yaml` (see the `*.example` templates).
+`configs/local/{condor,slurm}.yaml` (see the `*.example` templates). The 
+cluster to use is autodetected based on available command-line tools.
 
 ## Reproducing the paper
 
 The repo's `out/` directory (eval result JSONs, ~3 GB) is gitignored. To
-regenerate paper figures you have two options:
-
-**Option A — re-run all experiments end-to-end.** Requires GPU compute
-(H100-class, ~hundreds of GPU-hours total).
+regenerate paper figures:
 
 1. Set environment variables:
    ```bash
@@ -80,10 +77,6 @@ regenerate paper figures you have two options:
    bash scripts/replot_paper_figures.sh
    ```
    Figures land under `plots/experiments/AXX_*/`.
-
-**Option B — figures only, from cached results.** Download the precomputed
-`out/` snapshot from <TODO: Zenodo / HF Hub URL>, extract it into the repo
-root, then run step 4 above. This skips all GPU compute.
 
 ### Mapping experiments to paper figures
 
@@ -124,8 +117,6 @@ Base and instruct variants of:
 - DREAM-7B (DLM)
 - Llama 3.1 8B (AR)
 - Qwen 2.5 7B (AR)
-
-Plus small AR/DLM 160M variants for fast iteration.
 
 ## Tasks
 
