@@ -3,8 +3,7 @@
 Code accompanying the paper **"Layer Collapse in Diffusion Language Models"**
 by Alexander Conzelmann, Albert Catalan-Tatjer, and Shiwei Liu (Tübingen AI
 Center / MPI for Intelligent Systems / ELLIS Institute Tübingen).
-arXiv: TODO (link pending). See [`CITATION.cff`](CITATION.cff) for citation
-metadata.
+arXiv: TODO (link pending).
 
 We systematically evaluate pruning and quantization for diffusion language
 models (LLaDA-8B, DREAM-7B) against autoregressive baselines (Llama 3.1 8B,
@@ -161,6 +160,3 @@ If you use this code, please cite:
   note   = {TODO: arXiv link},
 }
 ```
-
-GitHub also renders a "Cite this repository" widget from
-[`CITATION.cff`](CITATION.cff).
