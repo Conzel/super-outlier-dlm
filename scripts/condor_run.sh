@@ -12,7 +12,7 @@
 #   TRITON_CACHE_DIR, TORCHINDUCTOR_CACHE_DIR  optional cache dirs
 #
 # CONTAINER_REPO_DIR controls where the repo is mounted inside the container
-# (defaults to /workspace/diffusion-prune; matches the SIF's working layout).
+# (defaults to /workspace/repo; matches the SIF's working layout).
 
 set -e
 
@@ -20,8 +20,8 @@ set -e
 : "${MODELS:?MODELS must be set}"
 : "${HF_HOME:?HF_HOME must be set}"
 
-SIF="${SIF:-${REPO_DIR}/diffusion-prune.sif}"
-CONTAINER_REPO_DIR="${CONTAINER_REPO_DIR:-/workspace/diffusion-prune}"
+SIF="${SIF:-${REPO_DIR}/super-outlier-dlm.sif}"
+CONTAINER_REPO_DIR="${CONTAINER_REPO_DIR:-/workspace/repo}"
 
 exec apptainer exec \
     --writable-tmpfs --nv -f -c \

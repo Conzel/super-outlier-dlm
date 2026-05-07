@@ -1,13 +1,15 @@
 # Super-Outlier in DLMs
 
-Systematic evaluation of pruning and quantization for diffusion language models
-(LLaDA-8B, DREAM-7B) compared against autoregressive baselines (Llama 3.1 8B,
-Qwen 2.5 7B).
-
-This repository accompanies the paper **"Layer Collapse in Diffusion Language
-Models"** by Alexander Conzelmann, Albert Catalan-Tatjer, and Shiwei Liu.
+Code accompanying the paper **"Layer Collapse in Diffusion Language Models"**
+by Alexander Conzelmann, Albert Catalan-Tatjer, and Shiwei Liu (Tübingen AI
+Center / MPI for Intelligent Systems / ELLIS Institute Tübingen).
 arXiv: TODO (link pending). See [`CITATION.cff`](CITATION.cff) for citation
 metadata.
+
+We systematically evaluate pruning and quantization for diffusion language
+models (LLaDA-8B, DREAM-7B) against autoregressive baselines (Llama 3.1 8B,
+Qwen 2.5 7B), and study the layer-collapse phenomenon that emerges under
+sparsification.
 
 ## Installation
 

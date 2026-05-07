@@ -3,9 +3,9 @@ requires = ["setuptools>=68.0", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "diffusion-prune"
+name = "super-outlier-dlm"
 version = "0.1.0"
-description = "Pruning and quantization evaluation for diffusion language models"
+description = "Code for the paper \"Layer Collapse in Diffusion Language Models\" — pruning and quantization evaluation"
 readme = "README.md"
 requires-python = ">=3.11,<3.13"
 license = { text = "Apache-2.0" }
