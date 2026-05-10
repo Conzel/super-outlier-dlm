@@ -2,8 +2,7 @@
 
 Code accompanying the paper **"Layer Collapse in Diffusion Language Models"**
 by Alexander Conzelmann, Albert Catalan-Tatjer, and Shiwei Liu (Tübingen AI
-Center / MPI for Intelligent Systems / ELLIS Institute Tübingen).
-arXiv: TODO (link pending).
+Center / MPI for Intelligent Systems / ELLIS Institute Tübingen). Link: [https://arxiv.org/abs/2605.06366](https://arxiv.org/abs/2605.06366)
 
 We systematically evaluate pruning and quantization for diffusion language
 models (LLaDA-8B, DREAM-7B) against autoregressive baselines (Llama 3.1 8B,
@@ -153,10 +152,13 @@ Released under the Apache 2.0 license — see [`LICENSE`](LICENSE).
 If you use this code, please cite:
 
 ```bibtex
-@article{conzelmann2026layercollapse,
-  title  = {Layer Collapse in Diffusion Language Models},
-  author = {Conzelmann, Alexander and Catalan-Tatjer, Albert and Liu, Shiwei},
-  year   = {2026},
-  note   = {TODO: arXiv link},
+@misc{conzelmann2026layercollapsediffusionlanguage,
+      title={Layer Collapse in Diffusion Language Models}, 
+      author={Alexander Conzelmann and Albert Catalan-Tatjer and Shiwei Liu},
+      year={2026},
+      eprint={2605.06366},
+      archivePrefix={arXiv},
+      primaryClass={cs.LG},
+      url={https://arxiv.org/abs/2605.06366}, 
 }
 ```
